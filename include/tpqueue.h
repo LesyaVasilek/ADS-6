@@ -24,14 +24,14 @@ class TPQueue {
     for (int i = j; i> n; i--)
       arr[i % size] = arr[(i - 1) % size];
     arr[n % size] = value;
-    ++l;
+    ++j;
   }
   T& pop() {
     if (count == 0) {
       throw std::string("EMPTY!");
     } else {
        count--;
-      return arr[f++ % size];
+      return arr[e++ % size];
     }
   }
 };
